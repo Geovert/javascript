@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IFELSE </title>
+    </head>
+    <body>
+        <button onclick="greet()">greet</button>
+        <p id="Greetings" ></p>
+        <p id="greet"></p>
+        <input id="marks" value=""><br>
+        <button onclick="getGrade()">Find Grade</button>
+        <p id="grade"> grade</p>
+
+        <button onclick="getDay()">Find</button>
+        <p id="today"></p>
+    <script>
+        /* IF, ELSE AND ELSE IF
+        If is used to specify a block of codes to be executed if a specified condition is true
+        -ELSE-To specify a block of codes to be executed if the same condition is false
+        -ELSE IF-To specify a new condition to test if the first condition is false
+        
+        
+        */ 
+     
+     function greet(){
+        if (new Date().getHours() > 0 && new Date().getHours() < 12 ){
+        document.getElementById("Greetings").innerHTML="GOOD MORNING";
+       } else {
+        document.getElementById("Greetings").innerHTML="GOOD evening";
+       }
+     } 
+// Using elseif conditions 
+let time=new Date().getHours();
+  if(time <10 ){
+    document.getElementById("greet").innerHTML="GOOD MORNING";
+  } else if(time <17) {
+    document.getElementById("greet").innerHTML="HAVE A GOOD DAY";
+  } else {
+    document.getElementById("greet").innerHTML="HAVE A GOODNIGHT";
+  }   
+
+  function getGrade(){
+   let marks =  document.getElementById("marks").value
+   let grade = document.getElementById("grade")
+  
+   if(marks < 100 && marks >= 80){
+    grade.innerHTML = "A";
+   } else if(marks < 80 && marks >= 75){
+    grade.innerHTML = "A-";
+  } else if(marks< 75 && marks>= 70){
+    grade.innerHTML = "your grade is B+";
+  } else if(marks < 70 && marks >=65){
+    grade.innerHTML = " your grade is B";
+  } else if(marks < 65 && marks >=60){
+    grade.innerHTML = "your grade is B-";
+  }else if(marks < 60 && marks >= 55){
+    grade.innerHTML = "your grade is C+";
+    } else if(marks < 55 && marks >= 50){
+      grade.innerHTML = "your grade is C";
+    } else if(marks < 50 && marks >= 45){
+      grade.innerHTML = "your grade is C-";
+    } else if(marks < 45 && marks >= 40){
+      grade.innerHTML = "your grade is D+";
+    } else if(marks < 40 && marks >= 35){
+      grade.innerHTML = "your grade is D";
+    } else if(marks < 35 && marks >= 30){
+      grade.innerHTML = "your grade is D-";
+    }
+    else{
+      grade.innerHTML ="invalid input";
+    }
+    }
+
+     /*SWITCH
+      Switch statement is use to perform different actions based on different conditions 
+      
+      */  
+     function getDay(){
+      let day =document.getElementById("today");
+     
+      switch(new Date().getDay()){
+
+        case 0:
+          day.innerHTML ="Sunday"
+          break;
+          case 1:
+          day.innerHTML ="Monday"
+          break; case 2:
+          day.innerHTML ="Tuesday"
+          break; case 3:
+          day.innerHTML ="Wednesday"
+          break; case 4:
+          day.innerHTML ="Thursday"
+          break;
+          case 5:
+          day.innerHTML ="Friday"
+          break;
+         default: day.innerHTML="today"
+      }
+     }
+    </script>
+    </body>
+</html>
