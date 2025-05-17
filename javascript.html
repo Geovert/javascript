@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GEOSCRIPTS</title>
+        <link rel="stylesheet" href="style.CSS">
+    </head>
+    <body>
+        <button onclick="getSum()">
+            get sum
+        </button><br>
+
+        <a href="#" onclick="getName()">salutations</a><br>
+        
+        <button onclick="getquotient()">Answer</button><br><br>
+        <button onclick="getVolume()">find volume</button>
+        <p id="volume">
+
+        </p><br><br>
+        <button onclick="getlogic()">get logic</button><br><br>
+
+        <button onclick=" compareNum()">compare numbers</button><br><br>
+
+
+        <button onclick="notlogic()" >GET </button><br><br>
+        <button onclick="addNum(8,9)" >GET sum </button><br><br>
+        <div>
+            <h1>THE LOTTERY</h1>
+            <p id="today"></p>
+            <button onclick="getDate()">date</button>
+            <P>Can you guess hte required fruit name?. If you guess correctly you stand a chance to win a Bitcoin.</P>
+                <input id="fruit_name" value=""><br><br>
+                <input type="submit" value="try now" onclick="verify()"><br>
+            
+        
+            <br>
+            <p id="results"></p>
+             </div>
+             
+             <script>
+                function verify(){
+                    let correctfruit ="cherry"
+                    let userfruit = document.getElementById("fruit_name").value;
+                    let result=(userfruit !== correctfruit)?"YOU ARE A FAILURE,YOU CAN NEVER MAKE IT!!": "CONGRATS YOU WIN!!";
+                    
+                    document.getElementById("results").innerHTML=result;
+                }
+                function getDate(){
+                    let now=new Date();
+                    document.getElementById("today").innerHTML =now;
+                }
+      
+   
+                
+             </script>
+
+
+
+        <script src="script.js"></script>
+    
+    </body>
+</html>
