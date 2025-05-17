@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="while"></p>
+    </body>
+    <script>
+        // The while loop loops through a block of code as long as the specified condition is true
+        let text=""
+        let i=0
+        while(i<=100){
+            text +="the number is" +i + "<br>"
+            i++
+        }
+        document.getElementById("while").innerHTML=text;
+        // The do while loop.This loop will execute the block code at least once before checking if the condition is true
+        let counter=10
+        do{
+            console.log(counter + "seconds left")
+            counter--
+
+        }while(counter<0)
+
+    </script>
+
+</html>
