@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GEOSCRIPTS</title>
+        <link rel="stylesheet" href="style.CSS">
+    </head>
+    <body>
+        
+        <p id="sum"></p>
+        <img src="img.PNG" id="image" alt="image">
+
+        <div>
+            <P id="output"></P>
+        </div>
+        <p id="lowerstring">
+           CONVERT THIS TEXT TO LOWERCASE!!!  this is lower case
+        </p>
+        <button id="convert_btn" onclick="convertstring()">convert</button>
+        
+        
+        
+        <script>
+          function addNum(a,b){
+                     return a+b
+}
+document.getElementById("sum").innerHTML=addNum(10,6);
+
+document.getElementById("image").onload= function (){
+    window.alert("The image has finished loading");
+
+}
+function convertstring(){
+    let text = document.getElementById("lowerstring").innerHTML;
+    document.getElementById("lowerstring").innerHTML=text.toLowerCase();
+}
+        </script>
+    </body>
+    </html>
